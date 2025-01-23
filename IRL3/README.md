@@ -1,4 +1,4 @@
-# Lecture 3 Data-level-parallelism (SIMD) In-class codes
+# IRL3 Data-level-parallelism (SIMD) In-class codes
 
 ## References to intrinsics
 * [Arm intrinsics](https://developer.arm.com/architectures/instruction-sets/intrinsics/) - filter for NEON instructions

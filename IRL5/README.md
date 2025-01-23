@@ -1,4 +1,4 @@
-# Lecture 4 Mass Parallelism: CUDA programming - in-class session
+# IRL5 Mass Parallelism: CUDA programming - in-class session
 
 In this module I have prepared three tasks. (But two of them you are familiar with!)
 
