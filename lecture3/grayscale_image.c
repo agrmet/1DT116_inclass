@@ -22,6 +22,7 @@ void grayscale_image_simd_avx(PPMImage *ppm)
     getRGBArrays(&R, &G, &B, ppm);
 
     //Fill this code
+    //Write into the ppm->grayscale_data[i];
 }
 
 void grayscale_image_simd_sse(PPMImage *ppm)
@@ -39,6 +40,7 @@ void grayscale_image_simd_neon(PPMImage *ppm)
     getRGBArrays(&R, &G, &B, ppm);
 
     //Fill this code
+    //Write into the ppm->grayscale_data[i];
 }
 
 void grayscale_image_simd_neon_fp16(PPMImage *ppm)
@@ -47,6 +49,7 @@ void grayscale_image_simd_neon_fp16(PPMImage *ppm)
     getRGBArrays_fp16(&R, &G, &B, ppm);
 
     //Fill this code
+    //Write into the ppm->grayscale_data_fp16[i];
 }
 #endif
 
