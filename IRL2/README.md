@@ -128,10 +128,11 @@ answers.
 * Count number of points that is within the circle ($distance to origin <= 1$)
 * Ratio of inside circle to total sample becomes $\frac{\pi}{4}$
 
-![Monte Carlo method animation](https://upload.wikimedia.org/wikipedia/commons/d/d4/Pi_monte_carlo_all.gif)
-This image is from the [Wikipedia Monte Carlo Method page](https://en.wikipedia.org/wiki/Monte_Carlo_method).
-(Kmhkmh, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0), via
-Wikimedia Commons)
+![Monte Carlo method animation(Kmhkmh, CC BY 4.0, via
+Wikimedia Commons)](https://upload.wikimedia.org/wikipedia/commons/d/d4/Pi_monte_carlo_all.gif)
+
+You can see an animated image on the [Wikipedia Monte Carlo Method page](https://en.wikipedia.org/wiki/Monte_Carlo_method#Overview).
+
 
 And because the random plotting is all independent of other threads, you can
 make this work in parallel!
