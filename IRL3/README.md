@@ -55,11 +55,8 @@ I have uploaded into our project shared directory.
 ./setup_img_links.sh
 ```
 
-If you are working on your own computers, you can transfer template images
-from Rackham:
-```
-rsync -az --progress "[your_rackham_username]@rackham.uppmax.uu.se:/proj/uppmax2024-2-5/shared/lecture3-inclass/*.ppm" .
-```
+If you are working on your own computers, you can download the images
+from Studium. Look for `images.tar.bz2` in the modules page under IRL3.
 
 Now, you are ready to start coding.
 There are three parts of this program:
@@ -109,7 +106,7 @@ open IMG_5440.pgm
 Once you are ready and fairly convinced that your code is working well, you can run timing experiments by using the following command
 
 ```
-make run_grayscale_x86 # if you are on an x86 machine, or rackham/snowy
+make run_grayscale_x86 # if you are on an x86 machine, or crocodile
 make run_grayscale_arm # if you are working on your Mac with an Apple silicon
 ```
 
