@@ -90,6 +90,8 @@ Given a number `n`, search from `f=2` up to `f=sqrt(n)` and find whether `n` is
 divisible by `f`. If divisible, `n` is not a prime number.
 If not divisible by any value of `f`, then `n` is a prime number.
 
+Hint: You can use the math library's `sqrt()` function. You can read more about it using `man sqrt`.
+
 * First write your code in a serial manner. (isPrime.c)
 * Then add the OpenMP directives to parallelize the code.
   * Again, try to use the `default(none)` directive and specify the `private`
