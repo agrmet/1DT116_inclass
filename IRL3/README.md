@@ -1,7 +1,7 @@
 # IRL3 Data-level-parallelism (SIMD) In-class codes
 
 ## References to intrinsics
-* [Arm intrinsics](https://developer.arm.com/architectures/instruction-sets/intrinsics/) - filter for NEON instructions
+* [Arm intrinsics](https://developer.arm.com/architectures/instruction-sets/intrinsics/) - filter for NEON instructions. [Arm manual](https://developer.arm.com/documentation/den0018/a/NEON-Intrinsics) has some examples too.
 * [Intel intrinsics](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html) - filter for all of the `SSE family` and just the `AVX` within the `AVX family`.
 
 In this module we will look at two tasks.
@@ -123,6 +123,11 @@ Finally, for the `float16_t` results, the provided code will in addition to
 the normal `IMG_XXX.pgm` files, also create a `IMG_XXXX_fp16.pgm` so that you
 can compare your FP16 and FP32 results. (I could not discern a difference
 between the two, but you may have better vision sensitivity than I do ;)
+
+### Hint for everyone
+Think about what type of operations you need to do for this task.
+All you need to do is set SIMD registers with a certain value, load, multiply, add, and store. 
+E.g. `_mm512_load_ps()` or `vld1q_f32()` to get you started!
 
 ## 2. Monte-carlo Pi simulation
 Generate many 100s of millions of random points with ranges [0,1] for both the x and y value.
