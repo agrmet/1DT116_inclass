@@ -127,7 +127,8 @@ between the two, but you may have better vision sensitivity than I do ;)
 ### Hint for everyone
 Think about what type of operations you need to do for this task.
 All you need to do is set SIMD registers with a certain value, load, multiply, add, and store. 
-E.g. `_mm512_load_ps()` or `vld1q_f32()` to get you started!
+E.g. `_mm512_load_ps()` or `vld1q_f32()` to get you started!  
+Setting all values of the elements in the vector can be done using the `_mm512_set1_ps()` or `vdupq_n_f32()`.
 
 ## 2. Monte-carlo Pi simulation
 Generate many 100s of millions of random points with ranges [0,1] for both the x and y value.
