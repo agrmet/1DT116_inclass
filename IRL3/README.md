@@ -130,6 +130,7 @@ All you need to do is set SIMD registers with a certain value, load, multiply, a
 E.g. `_mm512_load_ps()` or `vld1q_f32()` to get you started!  
 Setting all values of the elements in the vector can be done using the `_mm512_set1_ps()` or `vdupq_n_f32()`.
 
+
 ## 2. Monte-carlo Pi simulation
 Generate many 100s of millions of random points with ranges [0,1] for both the x and y value.
 Then go through each of the random point and measure the euclidean distance between the point and the origin.
@@ -156,3 +157,14 @@ make run_pi_arm # if you are working on your Mac with an Apple silicon
 ```
 
 Make sure to check that the Pi value printed for your SIMD version is relatively close to the Pi value from the serial version!
+
+### Hint
+When comparing whether the distance of the point from the origin is less than or equal to 1.0, you will be using compare operators (`_mm_cmp_ps()`, `vcleq_f32()`).
+Be wary that these operators will return values where all the corresponding bits of that lane will be set to 1. 
+E.g. if you have a 128-bit vector with 4x32-bit floats and the first element is within the 1.0 distance. The 32 bits of the first element's lane will all be set to 1s.
+You will need to convert this value into a value `1` for each lane, then you can do a cross-lane addition (`vaddvq_u32()`), or if you have AVX512 you can use the `_mm_cmp_ps_mask()` which will provide one bit per lane, then you can use one of the `popcnt` instructions to count all the values.
+
+**If you need more challenge, try to do the pi calculation through integration method using SIMD!**
+
+
+
