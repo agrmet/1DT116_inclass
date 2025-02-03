@@ -2,7 +2,7 @@
 
 ## References to intrinsics
 * [Arm intrinsics](https://developer.arm.com/architectures/instruction-sets/intrinsics/) - filter for NEON instructions. [Arm manual](https://developer.arm.com/documentation/den0018/a/NEON-Intrinsics) has some examples too.
-* [Intel intrinsics](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html) - filter for all of the `SSE family` and just the `AVX` within the `AVX family`.
+* [x86 intrinsics](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html) - filter for all of the `SSE family` and just the `AVX` within the `AVX family`. (Intel and AMD machines!)
 
 In this module we will look at two tasks.
 
