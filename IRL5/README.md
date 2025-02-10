@@ -8,7 +8,7 @@ make grayscale_image # if you want to generate code for the first task
 make pi # if you want to build the second task
 make matmult # if you want to build the final task
 ```
-Once you have filled in all three `.cu`j files, you should be able to simply just run `make` and the Makefile will build all three programs.
+Once you have filled in all three `.cu` files, you should be able to simply just run `make` and the Makefile will build all three programs.
 
 ## 1. Converting a color image into a grayscale image. (Yet again!)
 
@@ -21,8 +21,8 @@ We will be working with unsigned char (1B) values directly in the CUDA kernel.
 We will be using the SIMD unfavorable, or actual data representation of PPM images! RGBRGBRGB...
 And we will find that with CUDA, it is actually really simple to do!
 
-For this work, unless you have a CUDA-capable NVIDIA GPU on your laptop (which I doubt ;P) you will most likely work on UPPMAX.
-If you are UPPMAX, run the `setup_img_links.sh` to setup symbolic links to the images that
+We will be using the same image files as we did in IRL3.
+If you are on 🐊, run the `setup_img_links.sh` to setup symbolic links to the images that
 I have uploaded into our project shared directory.
 
 ```
@@ -47,14 +47,17 @@ Once you have implemented your version, you can run your program using the follo
 ./grayscale_image *.ppm
 ```
 
-Then check the generated grayscale image that is in the PGM format. You can use `eog` that is installed on rackham.
-You need to have x-forwarding set up to use this.
+Then check the generated grayscale image that is in the PGM format. You can use `eog` that is installed on 🐊.
+You need to have x-forwarding set up to use this. You can also transfer the generated `.pgm` image onto your machine and view it there.
 
 ```
 eog IMG_5440.pgm
 ```
 
-Compare with the IMG\_5440.ppm (again using eog) and you should find that they are similar and PGM file is the gray-scale version of the PPM image.
+Compare with the IMG\_5440.ppm and you should find that they are similar and PGM file is the gray-scale version of the PPM image.
+
+### Additional challenge (and it should be easy this time)
+Try apply Gaussian blur on your images using CUDA.
 
 ## 2. Monte-carlo Pi simulation
 
