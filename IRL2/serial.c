@@ -9,14 +9,24 @@ int main () {
     double begin,end; // Timestamps for beginning and end of computation
 
     //Allocate Array A and B with N elements
-    //Fill in
-
+    A = calloc(N, sizeof(int));
+    B = calloc(N, sizeof(int));
+    
     //Initialize arrays
-    //Fill in. Loop through A and B and fill in initial value
-
+    for (int i = 0; i < N; i++)
+    {
+        int n = rand() % 101;
+        A[i] = n;
+        B[i] = n;
+    }
+    
     //Now running time-stamp
     begin = omp_get_wtime();
     //Fill in. Loop and generate dot-product
+    for (int i = 0; i < N; i++)
+    {
+        dot_product += A[i] * B[i];
+    }
     end = omp_get_wtime();
 
     printf("The final dotproduct is %ld\n", dot_product);
