@@ -15,7 +15,7 @@ openmp: openmp.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -fopenmp
 
 isPrime: isPrime.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -fopenmp
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -fopenmp -lm
 
 pi: pi.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -fopenmp
